@@ -1,0 +1,19 @@
+{
+  "a-component": {
+    "prefix": "a-component",
+    "description": "A standalone Angular Component without style encapsulation",
+    "body": [
+      "import { Component, ViewEncapsulation } from '@angular/core';",
+      "",
+      "@Component({",
+      "  selector: 'app-${TM_FILENAME_BASE/(\\.component$)//}',",
+      "  templateUrl: '${TM_FILENAME_BASE}.html',",
+      "  styleUrl: '${TM_FILENAME_BASE}.css',",
+      "  encapsulation: ViewEncapsulation.None,",
+      "  standalone: true,"
+      "})",
+      "export class ${TM_FILENAME_BASE/(.)(.*)/${1:/upcase}${2:/camelcase}/} {}",
+      ""
+    ]
+  }
+}

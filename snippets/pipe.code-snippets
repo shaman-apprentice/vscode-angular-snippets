@@ -1,0 +1,20 @@
+{
+  "a-pipe": {
+    "prefix": "a-pipe",
+    "description": "A standalone Angular Pipe",
+    "body": [
+      "import { Pipe, PipeTransform  } from '@angular/core';",
+      "",
+      "@Pipe({",
+      "  name: '${TM_FILENAME_BASE/(\\.pipe$)//}',",
+      "  standalone: true,"
+      "})",
+      "export class ${TM_FILENAME_BASE/(.)(.*)/${1:/upcase}${2:/camelcase}/} implements PipeTransform {",
+      "  transform(value: unknown): unknown {",
+      "    return value;",
+      "  }",
+      "}",
+      ""
+    ]
+  }
+}

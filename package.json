@@ -1,0 +1,28 @@
+{
+  "name": "angular-snippets",
+  "displayName": "Angular Snippets",
+  "description": "Snippets for Angular",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/component.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/pipe.code-snippets"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaman-apprentice/blob-saver.git"
+  }
+}
