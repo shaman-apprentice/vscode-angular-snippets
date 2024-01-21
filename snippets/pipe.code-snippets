@@ -9,7 +9,7 @@
       "  name: '${TM_FILENAME_BASE/(\\.pipe$)//}',",
       "  standalone: true,"
       "})",
-      "export class ${TM_FILENAME_BASE/(.)(.*)/${1:/upcase}${2:/camelcase}/} implements PipeTransform {",
+      "export class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} implements PipeTransform {",
       "  transform(value: unknown): unknown {",
       "    return value;",
       "  }",

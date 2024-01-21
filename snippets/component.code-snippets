@@ -12,7 +12,7 @@
       "  encapsulation: ViewEncapsulation.None,",
       "  standalone: true,"
       "})",
-      "export class ${TM_FILENAME_BASE/(.)(.*)/${1:/upcase}${2:/camelcase}/} {}",
+      "export class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {}",
       ""
     ]
   }
