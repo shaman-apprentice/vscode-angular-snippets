@@ -6,7 +6,7 @@
       "import { Component, ViewEncapsulation } from '@angular/core';",
       "",
       "@Component({",
-      "  selector: 'app-${TM_FILENAME_BASE/(\\.component$)//}',",
+      "  selector: 'app-${TM_FILENAME_BASE/(.*?)([A-Z])|(\\.component$)/${1}${2:+-}${2:/downcase}/g}',",
       "  templateUrl: '${TM_FILENAME_BASE}.html',",
       "  styleUrl: '${TM_FILENAME_BASE}.css',",
       "  encapsulation: ViewEncapsulation.None,",
