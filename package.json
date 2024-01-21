@@ -1,7 +1,8 @@
 {
-  "name": "angular-snippets",
-  "displayName": "Angular Snippets",
+  "name": "angular-snippets-by-shaman-apprentice",
+  "displayName": "Angular Snippets by shaman-apprentice",
   "description": "Snippets for Angular",
+  "publisher": "shaman-apprentice",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.85.0"
