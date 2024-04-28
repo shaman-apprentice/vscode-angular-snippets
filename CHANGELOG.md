@@ -2,7 +2,13 @@
 
 This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [unreleased] (Breaking 🐱 | Feat | Fixed 🐞)
+## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
+
+## [2.0.1] 2024-04-28
+
+### Fixed 🐞
+
+- Delay extension activation until first call of a contributed command. This fixes error message popping up at start, that angular.json couldn't be found, when you open a non-Angular project. Also change type of message from error to warning, as we already gracefully default to "app".
 
 ## [2.0.0] 2024-03-17
 

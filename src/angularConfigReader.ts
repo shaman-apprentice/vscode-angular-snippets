@@ -12,7 +12,7 @@ export async function getPrefix(): Promise<string> {
     const project = projects[0][1];
     return project.prefix ?? "app";
   } catch(error) {
-    window.showErrorMessage("Extension angular-snippets-by-shaman-apprentice couldn't parse angular.json at project root - defaulting to \"app\": " + error);
+    window.showWarningMessage("Extension angular-snippets-by-shaman-apprentice couldn't parse angular.json at project root - defaulting to \"app\": " + error);
     return "app";
   }
 }

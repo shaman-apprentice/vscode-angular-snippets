@@ -3,15 +3,12 @@
   "displayName": "Angular Snippets by shaman-apprentice",
   "description": "Snippets for Angular",
   "publisher": "shaman-apprentice",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "engines": {
     "vscode": "^1.87.2"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
