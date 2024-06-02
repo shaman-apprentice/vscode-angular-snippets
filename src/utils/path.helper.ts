@@ -1,13 +1,8 @@
-import { env, commands} from "vscode";
-import { dirname, sep } from "node:path";
+import { env, commands, workspace, Uri } from "vscode";
+import { dirname, sep, join } from "node:path";
 import { stat } from "node:fs/promises"
 
-// async function isDirectory(uri: Uri): Promise<boolean> {
-//   const pathStats = await workspace.fs.stat(uri);
-//   return pathStats.type === FileType.Directory;
-// }
-
-export type FolderTarget = {
+type FolderTarget = {
   path: string;
   name: string;
 }
@@ -20,6 +15,11 @@ export async function getFolderTarget(): Promise<FolderTarget> {
     path,
     name: path.split(sep).pop()!
   }
+}
+
+export function buildUri(path: string, fileName: string): Uri {
+  const fullPath = join(path, fileName);
+  return Uri.file(fullPath);
 }
 
 async function getFolderPath(path: string) {

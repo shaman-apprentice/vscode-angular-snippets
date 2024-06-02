@@ -1,5 +1,6 @@
 import { commands, env, workspace, Uri, FileType } from "vscode";
-import { getFolderTarget } from "../utils/path.helper";
+import { buildUri, getFolderTarget } from "../utils/path.helper";
+import { buildComponent } from "../utils/templates/component.generator";
 
 export async function scaffoldComponentFolder() {
   console.debug("hi from scaffolding");
@@ -7,8 +8,13 @@ export async function scaffoldComponentFolder() {
   await commands.executeCommand('copyFilePath');
   const target = await getFolderTarget();
 
-  console.log(target)
+  await workspace.fs.writeFile(
+    buildUri(target.path, target.name + '.component.ts'),
+    Buffer.from(buildComponent(target.name))
+  );
 
-  // see note below for parsing multiple files/folders
-  // newUri = await vscode.Uri.file(folder);   
+  // await vscode.window.showInputBox({ placeHolder: 'folder name' });
+
+  console.log(target)
 }
+
