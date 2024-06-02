@@ -4,6 +4,10 @@ This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/
 
 ## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
 
+### Feat 🚀
+
+- Remove `styleUrl` from component template, as utility-first approaches often don't need it.
+
 ## [2.0.1] 2024-04-28
 
 ### Fixed 🐞

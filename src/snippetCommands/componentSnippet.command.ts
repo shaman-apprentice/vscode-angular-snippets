@@ -15,7 +15,6 @@ export function insertComponentTemplate() {
 @Component({
   selector: "${toComponentSelector(fileName, prefix)}",
   templateUrl: "${fileName}.html",
-  styleUrl: "${fileName}.css",
   encapsulation: ViewEncapsulation.None,
   standalone: true,
 })
