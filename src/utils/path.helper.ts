@@ -17,8 +17,8 @@ export async function getFolderTarget(): Promise<FolderTarget> {
   }
 }
 
-export function buildUri(path: string, fileName: string): Uri {
-  const fullPath = join(path, fileName);
+export function buildUri(...paths: string[]): Uri {
+  const fullPath = join(...paths);
   return Uri.file(fullPath);
 }
 
