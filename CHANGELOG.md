@@ -4,6 +4,8 @@ This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/
 
 ## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
 
+## [2.1.0] 2024-06-02
+
 ### Feat 🚀
 
 - Remove `styleUrl` from component template, as styling with utility class names often don't need it.
