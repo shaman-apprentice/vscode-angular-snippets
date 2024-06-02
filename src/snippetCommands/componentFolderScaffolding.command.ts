@@ -1,4 +1,4 @@
-import { window, workspace } from "vscode";
+import { commands, window, workspace } from "vscode";
 import { buildUri, getContainingFolder } from "../utils/path.helper";
 import { buildComponent } from "../utils/templates/component.generator";
 
@@ -10,9 +10,10 @@ export async function scaffoldComponentFolder() {
       return;
 
     await workspace.fs.createDirectory(buildUri(folder, componentName));
+    const componentUri = buildUri(folder, componentName, componentName + '.component.ts');
     await Promise.all([
       workspace.fs.writeFile(
-        buildUri(folder, componentName, componentName + '.component.ts'),
+        componentUri,
         Buffer.from(buildComponent(componentName + '.component'))
       ),
       workspace.fs.writeFile(
@@ -20,6 +21,8 @@ export async function scaffoldComponentFolder() {
         Buffer.from('')
       )
     ]);
+
+    await commands.executeCommand('revealInExplorer', componentUri);
 
     console.log(`Successfully created component ${componentName}`);
   } catch (error) {
