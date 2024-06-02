@@ -14,12 +14,13 @@ import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-some',
   templateUrl: 'some.component.html',
-  styleUrl: 'some.component.css',
   encapsulation: ViewEncapsulation.None,
   standalone: true,
 })
 export class SomeComponent {}
 ```
+
+`a-component-folder` will create a folder with prompted name, a component class as above and an empty html file
 
 ### service
 
