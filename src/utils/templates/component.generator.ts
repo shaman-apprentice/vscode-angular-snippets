@@ -1,8 +1,7 @@
 import { PrefixManager } from "../../prefix.manager";
 import { toClassName, toComponentSelector } from "../fileName.parser";
 
-// todo Component class suffix
-// todo component in html templateUrl
+/** @param fileName basename without file extension */
 export function buildComponent(fileName: string) {
   const prefix = PrefixManager.getPrefix();
   
