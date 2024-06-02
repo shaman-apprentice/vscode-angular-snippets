@@ -1,4 +1,4 @@
-import { env, commands, Uri, window } from "vscode";
+import { env, commands, Uri } from "vscode";
 import { dirname, join } from "node:path";
 import { stat } from "node:fs/promises"
 import { EOL } from "node:os";
