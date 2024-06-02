@@ -3,7 +3,7 @@
   "displayName": "Angular Snippets by shaman-apprentice",
   "description": "Snippets for Angular",
   "publisher": "shaman-apprentice",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "engines": {
     "vscode": "^1.87.2"
   },
@@ -29,7 +29,7 @@
         {
           "command": "angular-snippets-by-shaman-apprentice.a-jest",
           "when": "editorLangId === typescript"
-        }, 
+        },
         {
           "command": "angular-snippets-by-shaman-apprentice.a-component-folder"
         }
