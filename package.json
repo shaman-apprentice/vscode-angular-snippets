@@ -29,6 +29,10 @@
         {
           "command": "angular-snippets-by-shaman-apprentice.a-jest",
           "when": "editorLangId === typescript"
+        }, 
+        {
+          "command": "angular-snippets-by-shaman-apprentice.a-component-folder",
+          "when": "explorerResourceIsFolder || editorFocus"
         }
       ]
     },
@@ -40,6 +44,10 @@
       {
         "command": "angular-snippets-by-shaman-apprentice.a-component",
         "title": "Insert template for an Angular component"
+      },
+      {
+        "command": "angular-snippets-by-shaman-apprentice.a-component-folder",
+        "title": "Create folder and scaffold Angular component files"
       },
       {
         "command": "angular-snippets-by-shaman-apprentice.a-pipe",
