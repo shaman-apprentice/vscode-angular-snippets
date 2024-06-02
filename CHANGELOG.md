@@ -6,7 +6,8 @@ This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/
 
 ### Feat 🚀
 
-- Remove `styleUrl` from component template, as utility-first approaches often don't need it.
+- Remove `styleUrl` from component template, as styling with utility class names often don't need it.
+- Add command `a-component-folder`, which creates folder, component class and component html template file base on given name by user prompt.
 
 ## [2.0.1] 2024-04-28
 

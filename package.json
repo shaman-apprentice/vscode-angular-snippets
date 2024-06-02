@@ -31,8 +31,7 @@
           "when": "editorLangId === typescript"
         }, 
         {
-          "command": "angular-snippets-by-shaman-apprentice.a-component-folder",
-          "when": "explorerResourceIsFolder || editorFocus"
+          "command": "angular-snippets-by-shaman-apprentice.a-component-folder"
         }
       ]
     },
