@@ -27,6 +27,10 @@
           "when": "editorLangId === typescript"
         },
         {
+          "command": "angular-snippets-by-shaman-apprentice.a-directive",
+          "when": "editorLangId === typescript"
+        },
+        {
           "command": "angular-snippets-by-shaman-apprentice.a-jest",
           "when": "editorLangId === typescript"
         },
@@ -51,6 +55,10 @@
       {
         "command": "angular-snippets-by-shaman-apprentice.a-pipe",
         "title": "Insert template for an Angular pipe"
+      },
+      {
+        "command": "angular-snippets-by-shaman-apprentice.a-directive",
+        "title": "Insert template for an Angular directive"
       },
       {
         "command": "angular-snippets-by-shaman-apprentice.a-jest",

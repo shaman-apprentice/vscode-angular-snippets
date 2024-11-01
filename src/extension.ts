@@ -5,6 +5,7 @@ import { insertComponentTemplate } from "./snippetCommands/componentSnippet.comm
 import { insertPipeTemplate } from "./snippetCommands/pipeSnippet.command";
 import { insertJestTemplate } from "./snippetCommands/jestSnippet.command";
 import { scaffoldComponentFolder } from "./snippetCommands/componentFolderScaffolding.command";
+import { insertDirectiveTemplate } from "./snippetCommands/directiveSnippet.command";
 
 export async function activate(context: ExtensionContext) {	
 	await PrefixManager.init();
@@ -16,6 +17,10 @@ export async function activate(context: ExtensionContext) {
 	context.subscriptions.push(commands.registerCommand(
 		'angular-snippets-by-shaman-apprentice.a-component', 
 		insertComponentTemplate
+	));
+	context.subscriptions.push(commands.registerCommand(
+		'angular-snippets-by-shaman-apprentice.a-directive',
+		insertDirectiveTemplate
 	));
 	context.subscriptions.push(commands.registerCommand(
 		'angular-snippets-by-shaman-apprentice.a-pipe', 

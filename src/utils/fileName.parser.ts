@@ -26,6 +26,14 @@ export function toPipeSelector(fileName: string): string {
   return parts.join("");
 }
 
+export function toDirectiveSelector(fileName: string, prefix = "app"): string {
+  const parts = fileName.split(/[-.]/);
+  if (parts.at(-1) === "directive") parts.pop();
+  return `[${prefix}${parts
+    .map(part => part[0].toLocaleUpperCase() + part.slice(1))
+    .join("")}]`;
+}
+
 export function toTestDescription(fileName: string) {
   return fileName
     .replace(/\.test$/, "")
@@ -42,4 +50,3 @@ function getParts(fileName: string): string[] {
     .split(/[-.]/);
   return parts.filter(part => part.length);
 }
-

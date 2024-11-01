@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { toClassName, toComponentSelector, toPipeSelector, toTestDescription } from "./fileName.parser";
+import { toClassName, toComponentSelector, toDirectiveSelector, toPipeSelector, toTestDescription } from "./fileName.parser";
 
 describe("fileName.parser", () => {
   describe("toClassName", () => {
@@ -27,6 +27,7 @@ describe("fileName.parser", () => {
     });
   })
 
+  // todo prefix 
   describe("toPipeSelector", () => {
     test.each([
       ["hydrogen.pipe", "hydrogen"],
@@ -34,6 +35,16 @@ describe("fileName.parser", () => {
       ["filter-pure-hydrogen.pipe", "filterPureHydrogen"],
     ])('"%s" becomes "%s"', (fileName, expectedClassName) => {
       expect(toPipeSelector(fileName)).toBe(expectedClassName);
+    });
+  })
+
+  describe("toDirectiveSelector", () => {
+    test.each([
+      ["hydrogen.directive", "[appHydrogen]"],
+      ["filterPureHydrogen.directive", "[appFilterPureHydrogen]"],
+      ["filter-pure-hydrogen.directive", "[appFilterPureHydrogen]"],
+    ])('"%s" becomes "%s"', (fileName, expectedSelector) => {
+      expect(toDirectiveSelector(fileName)).toBe(expectedSelector);
     });
   })
 
