@@ -13,21 +13,21 @@ export function toClassName(fileName: string): string {
 }
 
 export function toComponentSelector(fileName: string, prefix = "app"): string {
-  const parts = [prefix, ...getParts(fileName)]
-    .map(part => part.toLowerCase())
+  const parts = [prefix, ...getParts(fileName)];
   if (parts.at(-1) === "component") parts.pop();
   return parts.join("-");
 }
 
-export function toPipeSelector(fileName: string): string {
-  const parts = getParts(fileName).map(part => camelCase(part));
-  if (parts.at(-1) === "Pipe") parts.pop();
-  parts[0] = parts[0][0].toLowerCase() + parts[0].substring(1);
-  return parts.join("");
+export function toPipeSelector(fileName: string, prefix = "app"): string {
+  const parts = getParts(fileName);
+  if (parts.at(-1) === "pipe") parts.pop();
+  return `${prefix}${parts
+    .map(part => part[0].toLocaleUpperCase() + part.slice(1))
+    .join("")}`;
 }
 
 export function toDirectiveSelector(fileName: string, prefix = "app"): string {
-  const parts = fileName.split(/[-.]/);
+  const parts = getParts(fileName);
   if (parts.at(-1) === "directive") parts.pop();
   return `[${prefix}${parts
     .map(part => part[0].toLocaleUpperCase() + part.slice(1))

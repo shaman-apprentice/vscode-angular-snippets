@@ -27,12 +27,11 @@ describe("fileName.parser", () => {
     });
   })
 
-  // todo prefix 
   describe("toPipeSelector", () => {
     test.each([
-      ["hydrogen.pipe", "hydrogen"],
-      ["filterPureHydrogen.pipe", "filterPureHydrogen"],
-      ["filter-pure-hydrogen.pipe", "filterPureHydrogen"],
+      ["hydrogen.pipe", "appHydrogen"],
+      ["filterPureHydrogen.pipe", "appFilterPureHydrogen"],
+      ["filter-pure-hydrogen.pipe", "appFilterPureHydrogen"],
     ])('"%s" becomes "%s"', (fileName, expectedClassName) => {
       expect(toPipeSelector(fileName)).toBe(expectedClassName);
     });

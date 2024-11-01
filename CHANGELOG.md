@@ -4,6 +4,16 @@ This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/
 
 ## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
 
+## [2.2.0] 2024-11-01
+
+### Feat 🚀
+
+- Add command `a-directive`, which templates an Angular directive.
+
+### Fixed 🐞
+
+- Use *angular.json's* prefix for `a-pipe` to align selector naming with other commands and remove doubled space its import. 
+
 ## [2.1.0] 2024-06-02
 
 ### Feat 🚀
