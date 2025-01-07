@@ -9,18 +9,18 @@ Adds snippet commands for Angular development. The active editor must be a TypeS
 `a-component` within *some.component.ts* will result in:
 
 ```ts
-import { Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-some',
   templateUrl: 'some.component.html',
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SomeComponent {}
 ```
 
-`a-component-folder` will create a folder with prompted name, a component class as above and an empty html file
+`a-component-folder` will create a folder with prompted name, a component class as above and an empty html file.
 
 ### directive
 

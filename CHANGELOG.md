@@ -4,11 +4,18 @@ This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/
 
 ## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
 
+## [2.3.0] 2025-01-07
+
+### Feat 🚀
+
+- Remove `standalone: true` from components as this has become the default in Angular@19.
+- Make components use `ChangeDetectionStrategy.OnPush`, to encourage a zone-less future.
+
 ## [2.2.1] 2024-11-01
 
 ### Fixed 🐞
 
-- Adjust docs to changes from *v2.2.0*
+- Adjust docs to changes from *v2.2.0*.
 
 ## [2.2.0] 2024-11-01
 
