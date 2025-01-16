@@ -31,7 +31,6 @@ import { Directive } from "@angular/core";
 
 @Directive({
   selector: "[appDoIt]",
-  standalone: true,
 })
 export class DoItDirective {}
 ```
@@ -56,7 +55,6 @@ import { Pipe, PipeTransform  } from '@angular/core';
 
 @Pipe({
   name: 'appPureHydrogen',
-  standalone: true,
 })
 export class PureHydrogenPipe implements PipeTransform {
   transform(value: unknown): unknown {

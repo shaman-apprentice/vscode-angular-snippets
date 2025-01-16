@@ -14,7 +14,6 @@ export function insertDirectiveTemplate() {
 
 @Directive({
   selector: "${toDirectiveSelector(fileName, prefix)}",
-  standalone: true,
 })
 export class ${toClassName(fileName)} {}
 `

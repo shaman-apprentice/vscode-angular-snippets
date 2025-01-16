@@ -14,7 +14,6 @@ export function insertPipeTemplate() {
 
 @Pipe({
   name: "${toPipeSelector(fileName, prefix)}",
-  standalone: true,
 })
 export class ${toClassName(fileName)} implements PipeTransform {
   transform(value: unknown): unknown {

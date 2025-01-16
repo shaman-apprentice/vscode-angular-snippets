@@ -4,6 +4,12 @@ This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/
 
 ## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
 
+## [2.3.1] 2025-01-16
+
+### Fixed 🐞
+
+- Remove `standalone: true` from directives and pipes as well.
+
 ## [2.3.0] 2025-01-07
 
 ### Feat 🚀
